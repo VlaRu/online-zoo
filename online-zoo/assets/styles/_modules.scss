@@ -1,0 +1,50 @@
+$bg-color: #fff;
+$main-color: #fff;
+$hover-color: #F9804B;
+$primery-color: #fff;
+$second-color: #fff;
+$default-state-color: #FE9013;
+$bg-default-state-color: linear-gradient(97deg, #F9804B 0%, #FE9013 100%);
+$active-state-color: #4B9200;
+$disabled-state-color: #767474;
+$black-blue-color: #333B41;
+$small-desktop: 1000px;
+$tablet:  640px;
+$mobile: 320px;
+
+
+// @include flex($d,$fd,$jc,$ai);
+@mixin flex($d,$fd,$jc,$ai) {
+  display: $d;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+
+//  @include font($ff,$fw,$fs);
+@mixin font($ff,$fw,$fs) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+}
+
+//@extend %tpl-subtitle;
+
+%tpl-subtitle{
+  @include font('Roboto',300,35px);
+  line-height: 45px;
+}
+
+//@extend %tpl-button;
+%tpl-button{
+  @include font('Roboto',500,35px);
+  width: 258px;
+  height: 54px;
+  color: $second-color;
+  background-color: $bg-default-state-color;
+  text-align: center;
+
+}
+
+

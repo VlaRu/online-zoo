@@ -1,0 +1,80 @@
+@import "nullstyle.scss";
+@import "modules.scss";
+@import "fonts.scss";
+
+body{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin: 0; 
+  height: 100vh;
+}
+
+.active{
+  color: $hover-color;
+}
+
+.main-container{
+  width: 1600px;
+  height: 100vh; 
+  background-color: green;
+}
+
+.container{
+  max-width: 1160px;
+}
+
+header{
+  width: 100%;
+  height: 80px;
+  @include flex(flex,row,center,center);
+  background-color: #000;
+}
+
+.header-container{
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  @include flex(flex,row,space-between,center);
+  @include font("Roboto",500,16px);
+  line-height: 140%;
+  font-style: normal;
+  color: $second-color;
+}
+
+h1{
+  @include font("Roboto",400,19px);
+  line-height: 120%;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  text-align: center;
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid #FFF;
+}
+
+.logo-bambook{
+  position: absolute;
+  left: 10px;
+  bottom: 6px;
+}
+
+.navigation-bar{
+  width: calc(461 / 975 *100%);
+  @include flex(flex,row,space-between,center);
+  margin-left: 68px;
+}
+
+.header-navigation{
+  width: calc(973 / 1160 *100%);
+}
+
+main{
+  max-width: 1160px;
+  margin: 0 auto;
+}
