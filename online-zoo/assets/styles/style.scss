@@ -1,6 +1,7 @@
 @import "nullstyle.scss";
 @import "modules.scss";
 @import "fonts.scss";
+//npx sass --watch assets/styles/style.scss:pages/main/style.css
 
 body{
   display: flex; 
@@ -8,6 +9,7 @@ body{
   align-items: center;
   margin: 0; 
   height: 100vh;
+  background-color: aqua;
 }
 
 .active{
@@ -16,12 +18,18 @@ body{
 
 .main-container{
   width: 1600px;
-  height: 100vh; 
-  background-color: green;
+  height: 100vh;
+  background-image: url(../../assets/images/Panda\ bg\ Desktop\ Main.png);
+  background-repeat: no-repeat;
+  background-position: center -2px;
+  background-size: 1650px cover;
+  background-color: greenyellow;
 }
 
 .container{
   max-width: 1160px;
+  margin: 0 auto;
+  @include flex(flex,row,center,center);
 }
 
 header{
@@ -75,6 +83,56 @@ h1{
 }
 
 main{
-  max-width: 1160px;
+  width: 100%;
   margin: 0 auto;
+}
+
+.watch-animal-section{
+  @include flex(flex,row,end,center);
+  height: 700px;
+  width: 100%;
+  position: relative;
+}
+
+.watch-animal-container{
+  width: calc(550 / 1160 * 100%);
+  height: 100%;
+  @include flex(flex,column,center,center);
+}
+
+.watch-button{
+  @extend %tpl-button;
+  border-radius: 25px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+}
+
+.watch-text-container{
+  position: relative;
+  z-index: 2;
+}
+
+.watch-tittle{
+  @include font("Roboto",700,107px);
+  line-height: 75%;
+  text-align: center;
+  color: $second-color;
+  text-transform: uppercase;
+  margin-left: 50px;
+}
+
+.text-selected{
+  color: #FFEE2E;
+}
+
+.circle{
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  right: 105px;
+  width: calc( 465 / 1160 * 100%);
+  height: calc(510 / 770 * 100%);
+  background-color: $default-state-color;
+  border-radius: 50%;
 }

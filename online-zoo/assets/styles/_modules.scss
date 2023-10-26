@@ -38,13 +38,13 @@ $mobile: 320px;
 
 //@extend %tpl-button;
 %tpl-button{
-  @include font('Roboto',500,35px);
-  width: 258px;
+  @include font('Roboto',500,16px);
+  width: 298px;
   height: 54px;
   color: $second-color;
-  background-color: $bg-default-state-color;
+  background-color: $default-state-color;
   text-align: center;
-
+  text-transform: uppercase;
 }
 
 
