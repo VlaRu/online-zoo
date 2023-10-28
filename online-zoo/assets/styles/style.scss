@@ -8,7 +8,6 @@ body{
   align-items: center;
   margin: 0; 
   height: 100vh;
-  background-color: aqua;
 }
 
 .active{
@@ -22,13 +21,12 @@ body{
   background-repeat: no-repeat;
   background-position: center -2px;
   background-size: 1650px cover;
-  background-color: greenyellow;
 }
 
 .container{
+  @include flex(flex,column,center,center);
   max-width: 1160px;
   margin: 0 auto;
-  @include flex(flex,row,center,center);
 }
 
 header{
@@ -82,6 +80,7 @@ h1{
 }
 
 main{
+  @include flex(flex,column,space-between,center);
   width: 100%;
   margin: 0 auto;
 }
@@ -146,7 +145,6 @@ main{
   @include flex(flex,row,space-between,center);
   height: 723px;
   width: 100%;
-  background-color: yellow;
   color: $black-blue-color;
   padding-bottom: 40px;
 }
@@ -166,4 +164,66 @@ main{
   @include font("Roboto",400,24px);
   line-height: 120%;
   margin: 54px 0 34px 0;
+}
+
+.pets-section{
+  @include flex(flex,column,flex-start,center);
+  height: 1106px;
+  width: 115%;
+  background-color: rgb(223, 195, 195);
+}
+
+.pets-container{
+  @include flex(flex,row,space-between,center);
+  margin-bottom: 70px;
+}
+
+.pets-card-elements{
+  width: 1160px;
+  height: 872px;
+  @include flex(flex,row,space-between,start);
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+.choose-button{
+  @extend %tpl-button;
+  border-radius: 25px;
+}
+
+.slide-button{
+  width: 62px;
+  height: 62px;
+  background-color: $default-state-color;
+  border-radius: 100%;
+}
+
+.about-image-container{
+  @include flex(flex,row,space-between,center);
+  margin: 8px 12px 0 16px;
+}
+
+.arrow-right{
+  transform: rotate(180deg);
+}
+
+.card-container{
+  height: 426px;
+  border-radius: 5px;
+  border: 1px solid var(--2, #FA6F32);
+}
+
+.card-container:nth-child(-n + 3){
+  margin-bottom: 20px;
+}
+
+.kind-animal{
+  @include font("Roboto",500,16);
+  line-height: 140%;
+   text-transform: uppercase;
+}
+
+.geographical-place{
+  @include font("Roboto",300,15);
+  line-height: 120%;
 }
