@@ -273,4 +273,48 @@ main {
   border-radius: 50%;
 }
 
+.bambook-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  width: 40.0862068966%;
+  height: 60.1659751037%;
+}
+
+.backstage-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 723px;
+  width: 100%;
+  background-color: yellow;
+  color: #333B41;
+  padding-bottom: 40px;
+}
+
+.tittle-backstage {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.text-backstage {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.subtitle-backstage {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  margin: 54px 0 34px 0;
+}
+
 /*# sourceMappingURL=style.css.map */

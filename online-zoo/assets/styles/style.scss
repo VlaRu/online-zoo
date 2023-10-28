@@ -1,7 +1,6 @@
 @import "nullstyle.scss";
 @import "modules.scss";
 @import "fonts.scss";
-//npx sass --watch assets/styles/style.scss:pages/main/style.css
 
 body{
   display: flex; 
@@ -135,4 +134,36 @@ main{
   height: calc(510 / 770 * 100%);
   background-color: $default-state-color;
   border-radius: 50%;
+}
+
+.bambook-text-container{
+  @include flex(flex,column,flex-start,left);
+  width: calc( 465 / 1160 * 100%);
+  height: calc(435 / 723 * 100%);
+}
+
+.backstage-section{
+  @include flex(flex,row,space-between,center);
+  height: 723px;
+  width: 100%;
+  background-color: yellow;
+  color: $black-blue-color;
+  padding-bottom: 40px;
+}
+
+.tittle-backstage{
+  @include font("Roboto",400,48px);
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.text-backstage{
+  @include font("Roboto",400,16px);
+  line-height: 140%;
+}
+
+.subtitle-backstage{
+  @include font("Roboto",400,24px);
+  line-height: 120%;
+  margin: 54px 0 34px 0;
 }
