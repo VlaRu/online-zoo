@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*---------------------------------------------*/
-.watch-button {
+.choose-button, .watch-button {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
@@ -122,7 +122,6 @@ body {
   align-items: center;
   margin: 0;
   height: 100vh;
-  background-color: aqua;
 }
 
 .active {
@@ -136,16 +135,15 @@ body {
   background-repeat: no-repeat;
   background-position: center -2px;
   background-size: 1650px cover;
-  background-color: greenyellow;
 }
 
 .container {
-  max-width: 1160px;
-  margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 header {
@@ -212,6 +210,10 @@ h1 {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
 }
@@ -289,7 +291,6 @@ main {
   align-items: center;
   height: 723px;
   width: 100%;
-  background-color: yellow;
   color: #333B41;
   padding-bottom: 40px;
 }
@@ -315,6 +316,83 @@ main {
   font-size: 24px;
   line-height: 120%;
   margin: 54px 0 34px 0;
+}
+
+.pets-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 1106px;
+  width: 115%;
+  background-color: rgb(223, 195, 195);
+}
+
+.pets-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.pets-card-elements {
+  width: 1160px;
+  height: 872px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+.choose-button {
+  border-radius: 25px;
+}
+
+.slide-button {
+  width: 62px;
+  height: 62px;
+  background-color: #FE9013;
+  border-radius: 100%;
+}
+
+.about-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 12px 0 16px;
+}
+
+.arrow-right {
+  transform: rotate(180deg);
+}
+
+.card-container {
+  height: 426px;
+  border-radius: 5px;
+  border: 1px solid var(--2, #FA6F32);
+}
+
+.card-container:nth-child(-n+3) {
+  margin-bottom: 20px;
+}
+
+.kind-animal {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.geographical-place {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 15;
+  line-height: 120%;
 }
 
 /*# sourceMappingURL=style.css.map */
