@@ -53,8 +53,7 @@ h1{
 }
 
 .logo{
-  display: flex;
-  align-items: center;
+  @include flex(flex,column,center,center);
   width: 82px;
   height: 52px;
   text-align: center;
@@ -356,6 +355,7 @@ main{
   background: #F5F7F6;
   -webkit-appearance: none;
   appearance: none;
+  cursor: pointer;
  
   &::-webkit-slider-thumb {
     -webkit-appearance: none; 
@@ -364,5 +364,132 @@ main{
     background: $default-state-color; 
     border: none; 
     border-radius: 5px;
+  }
+}
+
+footer{
+  width: 1600px;
+  height: 425px;
+  @include flex(flex,row,center,center);
+  background-color: #000;
+}
+
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: calc(1160 / 1600 *100%);
+  height: 360px;
+  background-color: #000;
+}
+
+.footer-logo{
+  @include flex(flex,column,center,center);
+  width: 82px;
+  height: 52px;
+  text-align: center;
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid #FFF;
+  color: #fff;
+}
+
+.button-footer{
+  margin-top: 70px;
+  @extend %tpl-button;
+  border-radius: 5px;
+}
+
+.social-media-container{
+  @include flex(flex,row,flex-start,start);
+  height: 134px;
+  margin-top: 44px;
+}
+
+.social-media-icons{
+  height: 100%;
+  @include flex(flex,column,space-between,start);
+}
+
+.social-circle{
+  width: 26px;
+  height: 26px;
+  @include flex(flex,column,center,center);
+  background-color: #c4c4c480;
+  border-radius: 100%;
+}
+
+.social-media-tittle-container{
+  height: 100%;
+  @include flex(flex,column,space-around,start);
+  margin-left: 12px;
+}
+
+.social-media-tittle{
+  @include font("Roboto",400,16px);
+  line-height: 140%;
+  color: $second-color;
+}
+
+.footer-navigation{
+  @include flex(flex,row,center,flex-end);
+  width: calc(362 / 1160 *100%);
+  height: 360px;
+  margin-left: 85px;
+}
+
+.footer-navigation-bar{ 
+  width: 100%;
+  @include flex(flex,row,space-between,center);
+  color: #FFF;
+  @include font("Roboto",400,16px);
+  line-height: 140%;
+}
+
+.subscribe-container{
+  height: 100%;
+  @include flex(flex,column,space-between,end);
+}
+
+.tittle-form{
+  @include font("Roboto",400,24px);
+  line-height: 120%;
+  color: #FFF;
+  margin: 10px 0;
+}
+
+.button-subscribe{
+  width: 129px;
+  height: 42px;
+  border-radius: 5px;
+  border: 1px solid var(--Green, #4B9200);
+  background: var(--gray_light, #F1F3F2);
+  color: var(--Green, #4B9200);
+  @include font("Roboto",400,16px);
+  line-height: 140%;
+  cursor: pointer;
+}
+
+.input-email{
+  width: 228px;
+  height: 42px;
+  @include font("Roboto",400,16px);
+  line-height: 140%;
+  color: var(--Gray-4, #BDBDBD);
+  background: #000;
+  padding-left: 10px;
+  border-radius: 2px;
+  border: 0.7px solid var(--orange, #F9804B);
+}
+
+.footer-sign{
+  @include font("Roboto",100,16px);
+  line-height: 130%;
+  color: rgba(255, 255, 255, 1);
+  p {
+    &:nth-child(2) {
+      margin-top: 10px;
+    }
   }
 }
