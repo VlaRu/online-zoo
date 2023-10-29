@@ -325,7 +325,6 @@ main {
   align-items: center;
   height: 1106px;
   width: 115%;
-  background-color: rgb(223, 195, 195);
 }
 
 .pets-container {
@@ -349,6 +348,7 @@ main {
 
 .choose-button {
   border-radius: 25px;
+  margin-top: 10px;
 }
 
 .slide-button {
@@ -393,6 +393,128 @@ main {
   font-weight: 300;
   font-size: 15;
   line-height: 120%;
+}
+
+.pick-and-feed-section {
+  width: 1600px;
+  height: 1005px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+}
+
+.pick-and-feed-container {
+  width: 1160px;
+  height: 835px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(253, 253, 255, 0.52);
+  border-radius: 20px;
+  color: #333B41;
+}
+
+.pick-and-feed-text {
+  width: 100%;
+  height: 45.1497005988%;
+}
+
+.pick-and-feed-icons {
+  width: 100%;
+  height: 29.2215568862%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.button-feed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.tittle-feed {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 48px;
+  color: #FE9013;
+  text-align: center;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+.subtittle-feed {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  margin-left: 100px;
+  margin-bottom: 40px;
+}
+
+.feed-text {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  margin-left: 100px;
+}
+.feed-text:first-of-type {
+  margin-bottom: 10px;
+}
+.feed-text:nth-of-type(2) {
+  margin-bottom: 60px;
+}
+
+.heading-feed {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+  text-align: center;
+}
+
+.feed-card-container {
+  height: 100%;
+  width: 168px;
+}
+
+.feed-card {
+  height: 168px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #F9804B;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+.feet-card-text {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.vector-container {
+  height: 100%;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 62px;
 }
 
 /*# sourceMappingURL=style.css.map */
