@@ -170,7 +170,6 @@ main{
   @include flex(flex,column,flex-start,center);
   height: 1106px;
   width: 115%;
-  background-color: rgb(223, 195, 195);
 }
 
 .pets-container{
@@ -189,6 +188,7 @@ main{
 .choose-button{
   @extend %tpl-button;
   border-radius: 25px;
+  margin-top: 10px;
 }
 
 .slide-button{
@@ -226,4 +226,99 @@ main{
 .geographical-place{
   @include font("Roboto",300,15);
   line-height: 120%;
+}
+
+.pick-and-feed-section{
+  width: 1600px;
+  height: 1005px;
+  padding-bottom: 20px;
+  @include flex(flex,row,center,center);
+  background: linear-gradient(315.75deg,rgba(254,210,144,.7) 30.06%,#febdab 100.95%,rgba(254,210,144,.7) 106.36%),linear-gradient(315.75deg,rgba(254,189,171,.74) 30.06%,rgba(243,169,248,.66) 50.74%,#e0d8f0 80.49%,#eaf7fe 127.9%,#eaf7fe 149.54%),linear-gradient(315.75deg,rgba(254,189,171,.74) 30.06%,rgba(243,169,248,.66) 50.74%,#e0d8f0 80.49%,#eaf7fe 127.9%,#eaf7fe 149.54%);
+}
+
+.pick-and-feed-container{
+  width: 1160px;
+  height: 835px;
+  @include flex(flex,column,center,center);
+  background: rgba(253,253,255,.52);
+  border-radius: 20px;
+  color: $black-blue-color;
+}
+
+.pick-and-feed-text{
+  width: 100%;
+  height: calc( 377 / 835 * 100%);
+}
+
+.pick-and-feed-icons{
+  width: 100%;
+  height: calc( 244 / 835 * 100%);
+  @include flex(flex,row,center,center);
+  margin-bottom: 50px;
+}
+
+.button-feed{
+  @include flex(flex,row,center,center);
+  margin-bottom: 25px;
+}
+
+.tittle-feed{
+  @include font("Roboto",400,48px);
+  color: $default-state-color;
+  text-align: center;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+.subtittle-feed{
+  @include font("Roboto",400,24px);
+  line-height: 120%;
+  margin-left: 100px;
+  margin-bottom: 40px;
+}
+
+.feed-text{
+  @include font("Roboto",500,16px);
+  line-height: 130%;
+  margin-left: 100px;
+  &:first-of-type{
+    margin-bottom: 10px;
+  }
+  &:nth-of-type(2){
+    margin-bottom: 60px;
+  }
+}
+
+
+.heading-feed{
+  @include font("Roboto",400,36px);
+  line-height: 130%;
+  text-align: center;
+}
+
+.feed-card-container{
+  height: 100%;
+  width: 168px;
+}
+
+.feed-card{
+  height: 168px;
+  width: 100%;
+  @include flex(flex,row,center,center);
+  border-radius: 5px;
+  border: 1px solid $hover-color;
+  background-color: $second-color;
+  margin-bottom: 30px;
+}
+
+.feet-card-text{
+  @include font("Roboto",400,16px);
+  line-height: 140%;
+}
+
+.vector-container{
+  height: 100%;
+  width: 130px;
+  @include flex(flex,column,flex-start,center);
+  padding-top: 62px;
 }
