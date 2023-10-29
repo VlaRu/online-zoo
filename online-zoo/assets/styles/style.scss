@@ -21,6 +21,31 @@ body{
   background-repeat: no-repeat;
   background-position: center -2px;
   background-size: 1650px cover;
+  position: relative;
+}
+
+.bg-flower{
+  position: absolute;
+  right: 0;
+  top: 780px;
+}
+
+.bg-palm-leaf{
+  position: absolute;
+  left: 0;
+  top: 2150px;
+}
+
+.bg-strelitzia{
+  position: absolute;
+  right: 0;
+  top: 2335px;
+}
+
+.bg-leaf{
+  position: absolute;
+  right: 0;
+  top: 4260px;
 }
 
 .container{
@@ -469,6 +494,7 @@ footer{
   @include font("Roboto",400,16px);
   line-height: 140%;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .input-email{
