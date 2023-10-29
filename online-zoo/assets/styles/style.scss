@@ -211,10 +211,9 @@ main{
   height: 426px;
   border-radius: 5px;
   border: 1px solid var(--2, #FA6F32);
-}
-
-.card-container:nth-child(-n + 3){
-  margin-bottom: 20px;
+  &:nth-child(-n + 3){
+    margin-bottom: 20px;
+  }
 }
 
 .kind-animal{
@@ -321,4 +320,49 @@ main{
   width: 130px;
   @include flex(flex,column,flex-start,center);
   padding-top: 62px;
+}
+
+.testimonials-section{
+  @include flex(flex,column,center,left);
+  width: 100%;
+  height: 919px;
+  padding-bottom: 50px;
+}
+
+.heading-testimonials{
+  @include font("Roboto",400,36px);
+  line-height: 130%;
+  text-align: center;
+  margin-bottom: 45px;
+  margin-top: 10px;
+}
+
+.container-testimonials{
+  @include flex(flex,row,space-between,center);
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.feedback-button{
+  @extend %tpl-button;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.progress-bar{
+  width:calc(600 / 1160 *100%);
+  height: 8px;
+  margin-left: calc(280 /1160 * 100%);
+  background: #F5F7F6;
+  -webkit-appearance: none;
+  appearance: none;
+ 
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    width: 116px; 
+    height: 6px; 
+    background: $default-state-color; 
+    border: none; 
+    border-radius: 5px;
+  }
 }
