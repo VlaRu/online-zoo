@@ -1,14 +1,10 @@
-$bg-color: #fff;
-$main-color: #fff;
-$hover-color: #F9804B;
-$primery-color: #fff;
-$second-color: #fff;
+
+$white-color: #fff;
+$hover-color: #E47209;
 $default-state-color: #FE9013;
-$bg-default-state-color: linear-gradient(97deg, #F9804B 0%, #FE9013 100%);
 $active-state-color: #4B9200;
 $disabled-state-color: #767474;
 $black-blue-color: #333B41;
-$orange_gradient: #FED290;
 $small-desktop: 1000px;
 $tablet:  640px;
 $mobile: 320px;
@@ -31,19 +27,12 @@ $mobile: 320px;
   font-size: $fs;
 }
 
-//@extend %tpl-subtitle;
-
-%tpl-subtitle{
-  @include font('Roboto',300,35px);
-  line-height: 45px;
-}
-
 //@extend %tpl-button;
 %tpl-button{
   @include font('Roboto',500,16px);
   width: 298px;
   height: 54px;
-  color: $second-color;
+  color: $white-color;
   background-color: $default-state-color;
   text-align: center;
   text-transform: uppercase;

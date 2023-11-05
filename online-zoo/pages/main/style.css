@@ -129,12 +129,12 @@ body {
 }
 
 .main-container {
-  width: 1600px;
+  max-width: 1600px;
   height: 100vh;
   background-image: url(../../assets/images/Panda\ bg\ Desktop\ Main.png);
   background-repeat: no-repeat;
   background-position: center -2px;
-  background-size: 1650px cover;
+  background-size: 100%;
   position: relative;
 }
 
@@ -162,17 +162,9 @@ body {
   top: 4260px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1160px;
-  margin: 0 auto;
-}
-
 header {
   width: 100%;
+  max-width: 1600px;
   height: 80px;
   display: flex;
   flex-direction: row;
@@ -182,7 +174,7 @@ header {
 }
 
 .header-container {
-  width: 100%;
+  width: 72.5%;
   max-width: 1160px;
   margin: 0 auto;
   display: flex;
@@ -209,12 +201,13 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 82px;
   width: 82px;
   height: 52px;
   text-align: center;
   position: relative;
   border-radius: 2px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
 }
 
 .logo-bambook {
@@ -231,33 +224,39 @@ h1 {
   align-items: center;
   margin-left: 68px;
 }
+.navigation-bar li:hover {
+  transition: 0.7s;
+  text-decoration: underline;
+}
 
 .header-navigation {
   width: 83.8793103448%;
 }
 
 main {
+  width: 100%;
+  max-width: 1600px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  width: 100%;
   margin: 0 auto;
 }
 
 .watch-animal-section {
+  width: 72.5%;
+  height: 700px;
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
-  height: 700px;
-  width: 100%;
   position: relative;
 }
 
 .watch-animal-container {
   width: 47.4137931034%;
   height: 100%;
+  max-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -270,6 +269,10 @@ main {
   margin-bottom: 10px;
   margin-left: 50px;
 }
+.watch-button:hover {
+  transition: 0.5s;
+  background-color: #E47209;
+}
 
 .watch-text-container {
   position: relative;
@@ -277,11 +280,11 @@ main {
 }
 
 .watch-tittle {
+  text-align: center;
   font-family: "Roboto";
   font-weight: 700;
   font-size: 107px;
   line-height: 75%;
-  text-align: center;
   color: #fff;
   text-transform: uppercase;
   margin-left: 50px;
@@ -295,31 +298,41 @@ main {
   position: absolute;
   z-index: 1;
   top: 15px;
-  right: 105px;
+  right: 9.0517241379%;
   width: 40.0862068966%;
   height: 66.2337662338%;
   background-color: #FE9013;
   border-radius: 50%;
 }
 
-.bambook-text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: left;
-  width: 40.0862068966%;
-  height: 60.1659751037%;
-}
-
 .backstage-section {
+  width: 72.5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 723px;
-  width: 100%;
   color: #333B41;
   padding-bottom: 40px;
+}
+
+.bambook-image-container {
+  width: 52.5%;
+  max-width: 609px;
+}
+
+.bamboo-cap-image {
+  width: 100%;
+  max-width: 609px;
+}
+
+.bambook-text-container {
+  width: 40.0862068966%;
+  height: 60.1659751037%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
 }
 
 .tittle-backstage {
@@ -346,24 +359,29 @@ main {
 }
 
 .pets-section {
+  width: 100%;
+  max-width: 1600px;
+  height: 1106px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 1106px;
-  width: 115%;
+  background-color: green;
 }
 
 .pets-container {
+  width: 82.625%;
+  max-width: 1322px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 70px;
+  background-color: rgb(41, 232, 41);
 }
 
 .pets-card-elements {
-  width: 1160px;
+  width: 87.7458396369%;
   height: 872px;
   display: flex;
   flex-direction: row;
@@ -377,12 +395,20 @@ main {
   border-radius: 25px;
   margin-top: 10px;
 }
+.choose-button:hover {
+  transition: 0.5s;
+  background-color: #E47209;
+}
 
 .slide-button {
   width: 62px;
   height: 62px;
   background-color: #FE9013;
   border-radius: 100%;
+}
+.slide-button:hover {
+  transition: 0.5s;
+  background-color: #E47209;
 }
 
 .about-image-container {
@@ -398,12 +424,18 @@ main {
 }
 
 .card-container {
+  width: 27.6853252648%;
   height: 426px;
   border-radius: 5px;
   border: 1px solid var(--2, #FA6F32);
 }
 .card-container:nth-child(-n+3) {
   margin-bottom: 20px;
+}
+
+.image-pets {
+  width: 100%;
+  max-width: 366px;
 }
 
 .kind-animal {
@@ -422,7 +454,8 @@ main {
 }
 
 .pick-and-feed-section {
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
   height: 1005px;
   padding-bottom: 20px;
   display: flex;
@@ -433,7 +466,7 @@ main {
 }
 
 .pick-and-feed-container {
-  width: 1160px;
+  width: 72.5%;
   height: 835px;
   display: flex;
   flex-direction: column;
@@ -465,6 +498,11 @@ main {
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
+  cursor: pointer;
+}
+.button-feed:hover {
+  transition: 0.5s;
+  background-color: #E47209;
 }
 
 .tittle-feed {
@@ -544,13 +582,29 @@ main {
 }
 
 .testimonials-section {
+  width: 72.5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  width: 100%;
   height: 919px;
   padding-bottom: 50px;
+  background-color: yellow;
+}
+
+.container-testimonials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1160px;
+  margin-bottom: 18px;
+  background-color: green;
+}
+
+.testimonials-images {
+  width: 23.1034482759%;
 }
 
 .heading-testimonials {
@@ -563,18 +617,13 @@ main {
   margin-top: 10px;
 }
 
-.container-testimonials {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 18px;
-}
-
 .feedback-button {
   border-radius: 5px;
   margin-top: 30px;
+}
+.feedback-button:hover {
+  transition: 0.5s;
+  background-color: #E47209;
 }
 
 .progress-bar {
@@ -596,8 +645,9 @@ main {
 }
 
 footer {
-  width: 1600px;
-  height: 425px;
+  width: 100%;
+  max-width: 1600px;
+  height: 443px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -606,12 +656,13 @@ footer {
 }
 
 .footer-container {
+  width: 72.5%;
+  height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: left;
   flex-wrap: wrap;
-  width: 72.5%;
-  height: 360px;
   background-color: #000;
 }
 
@@ -620,18 +671,22 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 82px;
+  max-width: 82px;
   height: 52px;
   text-align: center;
   position: relative;
   border-radius: 2px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   color: #fff;
 }
 
 .button-footer {
   margin-top: 70px;
   border-radius: 5px;
+}
+.button-footer:hover {
+  transition: 0.5s;
+  background-color: #E47209;
 }
 
 .social-media-container {
@@ -695,14 +750,20 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: #FFF;
+  color: #fff;
   font-family: "Roboto";
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
 }
+.footer-navigation-bar li:hover {
+  cursor: pointer;
+  transition: 0.7s;
+  text-decoration: underline;
+}
 
 .subscribe-container {
+  max-width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -715,7 +776,7 @@ footer {
   font-weight: 400;
   font-size: 24px;
   line-height: 120%;
-  color: #FFF;
+  color: #fff;
   margin: 10px 0;
 }
 

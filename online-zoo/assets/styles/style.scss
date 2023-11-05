@@ -11,16 +11,16 @@ body{
 }
 
 .active{
-  color: $hover-color;
+  color: #F9804B;
 }
 
 .main-container{
-  width: 1600px;
+  max-width: 1600px;
   height: 100vh;
   background-image: url(../../assets/images/Panda\ bg\ Desktop\ Main.png);
   background-repeat: no-repeat;
   background-position: center -2px;
-  background-size: 1650px cover;
+  background-size: 100%;
   position: relative;
 }
 
@@ -48,28 +48,23 @@ body{
   top: 4260px;
 }
 
-.container{
-  @include flex(flex,column,center,center);
-  max-width: 1160px;
-  margin: 0 auto;
-}
-
 header{
   width: 100%;
+  max-width: 1600px;
   height: 80px;
   @include flex(flex,row,center,center);
   background-color: #000;
 }
 
 .header-container{
-  width: 100%;
+  width: calc(1160 /1600 *100%);
   max-width: 1160px;
   margin: 0 auto;
   @include flex(flex,row,space-between,center);
   @include font("Roboto",500,16px);
   line-height: 140%;
   font-style: normal;
-  color: $second-color;
+  color: $white-color;
 }
 
 h1{
@@ -79,12 +74,13 @@ h1{
 
 .logo{
   @include flex(flex,column,center,center);
+  max-width: 82px;
   width: 82px;
   height: 52px;
   text-align: center;
   position: relative;
   border-radius: 2px;
-  border: 1px solid #FFF;
+  border: 1px solid $white-color;
 }
 
 .logo-bambook{
@@ -97,6 +93,10 @@ h1{
   width: calc(461 / 975 *100%);
   @include flex(flex,row,space-between,center);
   margin-left: 68px;
+  li:hover{
+    transition: 0.7s;
+    text-decoration: underline;
+  }
 }
 
 .header-navigation{
@@ -104,21 +104,23 @@ h1{
 }
 
 main{
-  @include flex(flex,column,space-between,center);
   width: 100%;
+  max-width: 1600px;
+  @include flex(flex,column,start,center);
   margin: 0 auto;
 }
 
 .watch-animal-section{
-  @include flex(flex,row,end,center);
+  width: calc(1160 /1600 *100%);
   height: 700px;
-  width: 100%;
+  @include flex(flex,row,end,center);
   position: relative;
 }
 
 .watch-animal-container{
   width: calc(550 / 1160 * 100%);
   height: 100%;
+  max-height: 700px;
   @include flex(flex,column,center,center);
 }
 
@@ -128,6 +130,10 @@ main{
   margin-top: 60px;
   margin-bottom: 10px;
   margin-left: 50px;
+  &:hover{
+    transition: 0.5s;
+    background-color: $hover-color;
+  }
 }
 
 .watch-text-container{
@@ -136,10 +142,10 @@ main{
 }
 
 .watch-tittle{
+  text-align: center;
   @include font("Roboto",700,107px);
   line-height: 75%;
-  text-align: center;
-  color: $second-color;
+  color: $white-color;
   text-transform: uppercase;
   margin-left: 50px;
 }
@@ -152,25 +158,35 @@ main{
   position: absolute;
   z-index: 1;
   top: 15px;
-  right: 105px;
+  right: calc(105 / 1160 * 100%);
   width: calc( 465 / 1160 * 100%);
   height: calc(510 / 770 * 100%);
   background-color: $default-state-color;
   border-radius: 50%;
 }
 
-.bambook-text-container{
-  @include flex(flex,column,flex-start,left);
-  width: calc( 465 / 1160 * 100%);
-  height: calc(435 / 723 * 100%);
-}
-
 .backstage-section{
+  width: calc(1160 /1600 *100%);
   @include flex(flex,row,space-between,center);
   height: 723px;
-  width: 100%;
   color: $black-blue-color;
   padding-bottom: 40px;
+}
+
+.bambook-image-container{
+  width: calc(609 / 1160 * 100%);
+  max-width: 609px;
+}
+
+.bamboo-cap-image{
+  width: 100%;
+  max-width: 609px;
+}
+
+.bambook-text-container{
+  width: calc( 465 / 1160 * 100%);
+  height: calc(435 / 723 * 100%);
+  @include flex(flex,column,flex-start,left);
 }
 
 .tittle-backstage{
@@ -191,18 +207,23 @@ main{
 }
 
 .pets-section{
-  @include flex(flex,column,flex-start,center);
+  width: 100%;
+  max-width: 1600px;
   height: 1106px;
-  width: 115%;
+  @include flex(flex,column,flex-start,center);
+  background-color: green;
 }
 
 .pets-container{
+  width: calc(1322 / 1600 *100%);
+  max-width: 1322px;
   @include flex(flex,row,space-between,center);
   margin-bottom: 70px;
+  background-color: rgb(41, 232, 41);
 }
 
 .pets-card-elements{
-  width: 1160px;
+  width: calc(1160 /1322 *100%);
   height: 872px;
   @include flex(flex,row,space-between,start);
   flex-wrap: wrap;
@@ -213,6 +234,10 @@ main{
   @extend %tpl-button;
   border-radius: 25px;
   margin-top: 10px;
+  &:hover{
+    transition: 0.5s;
+    background-color: $hover-color;
+  }
 }
 
 .slide-button{
@@ -220,6 +245,10 @@ main{
   height: 62px;
   background-color: $default-state-color;
   border-radius: 100%;
+  &:hover{
+    transition: 0.5s;
+    background-color: $hover-color;
+  }
 }
 
 .about-image-container{
@@ -232,12 +261,18 @@ main{
 }
 
 .card-container{
+  width: calc(366 / 1322 *100%);
   height: 426px;
   border-radius: 5px;
   border: 1px solid var(--2, #FA6F32);
   &:nth-child(-n + 3){
     margin-bottom: 20px;
   }
+}
+
+.image-pets{
+  width: 100%;
+  max-width: 366px
 }
 
 .kind-animal{
@@ -252,7 +287,8 @@ main{
 }
 
 .pick-and-feed-section{
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
   height: 1005px;
   padding-bottom: 20px;
   @include flex(flex,row,center,center);
@@ -260,7 +296,7 @@ main{
 }
 
 .pick-and-feed-container{
-  width: 1160px;
+  width: calc(1160 /1600 *100%);
   height: 835px;
   @include flex(flex,column,center,center);
   background: rgba(253,253,255,.52);
@@ -283,6 +319,11 @@ main{
 .button-feed{
   @include flex(flex,row,center,center);
   margin-bottom: 25px;
+  cursor: pointer;
+  &:hover{
+    transition: 0.5s;
+    background-color: $hover-color;
+  }
 }
 
 .tittle-feed{
@@ -329,8 +370,8 @@ main{
   width: 100%;
   @include flex(flex,row,center,center);
   border-radius: 5px;
-  border: 1px solid $hover-color;
-  background-color: $second-color;
+  border: 1px solid #F9804B;
+  background-color: $white-color;
   margin-bottom: 30px;
 }
 
@@ -347,10 +388,23 @@ main{
 }
 
 .testimonials-section{
+  width: calc(1160 /1600 *100%);
   @include flex(flex,column,center,left);
-  width: 100%;
   height: 919px;
   padding-bottom: 50px;
+  background-color: yellow;
+}
+
+.container-testimonials{
+  @include flex(flex,row,space-between,center);
+  width: 100%;
+  max-width: 1160px;
+  margin-bottom: 18px;
+  background-color: green;
+}
+
+.testimonials-images{
+  width: calc(268 / 1160 *100%);
 }
 
 .heading-testimonials{
@@ -361,16 +415,14 @@ main{
   margin-top: 10px;
 }
 
-.container-testimonials{
-  @include flex(flex,row,space-between,center);
-  width: 100%;
-  margin-bottom: 18px;
-}
-
 .feedback-button{
   @extend %tpl-button;
   border-radius: 5px;
   margin-top: 30px;
+  &:hover{
+    transition: 0.5s;
+    background-color: $hover-color;
+  }
 }
 
 .progress-bar{
@@ -393,37 +445,40 @@ main{
 }
 
 footer{
-  width: 1600px;
-  height: 425px;
+  width: 100%;
+  max-width: 1600px;
+  height: 443px;
   @include flex(flex,row,center,center);
   background-color: #000;
 }
 
 .footer-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  flex-wrap: wrap;
   width: calc(1160 / 1600 *100%);
   height: 360px;
+  @include flex(flex,column,flex-end,left);
+  flex-wrap: wrap;
   background-color: #000;
 }
 
 .footer-logo{
   @include flex(flex,column,center,center);
-  width: 82px;
+  max-width: 82px;
   height: 52px;
   text-align: center;
   position: relative;
   border-radius: 2px;
-  border: 1px solid #FFF;
-  color: #fff;
+  border: 1px solid $white-color;
+  color: $white-color;
 }
 
 .button-footer{
   margin-top: 70px;
   @extend %tpl-button;
   border-radius: 5px;
+  &:hover{
+    transition: 0.5s;
+    background-color: $hover-color;
+  }
 }
 
 .social-media-container{
@@ -454,7 +509,7 @@ footer{
 .social-media-tittle{
   @include font("Roboto",400,16px);
   line-height: 140%;
-  color: $second-color;
+  color: $white-color;
 }
 
 .footer-navigation{
@@ -467,12 +522,18 @@ footer{
 .footer-navigation-bar{ 
   width: 100%;
   @include flex(flex,row,space-between,center);
-  color: #FFF;
+  color: $white-color;
   @include font("Roboto",400,16px);
   line-height: 140%;
+  li:hover{
+    cursor: pointer;
+    transition: 0.7s;
+    text-decoration: underline;
+  }
 }
 
 .subscribe-container{
+  max-width: 40%;
   height: 100%;
   @include flex(flex,column,space-between,end);
 }
@@ -480,7 +541,7 @@ footer{
 .tittle-form{
   @include font("Roboto",400,24px);
   line-height: 120%;
-  color: #FFF;
+  color: $white-color;
   margin: 10px 0;
 }
 
