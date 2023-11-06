@@ -67,7 +67,7 @@ header{
   color: $white-color;
 }
 
-h1{
+h1,.footer-logo-tittle{
   @include font("Roboto",400,19px);
   line-height: 120%;
 }
@@ -96,6 +96,7 @@ h1{
   li:hover{
     transition: 0.7s;
     text-decoration: underline;
+    color: $hover-color;
   }
 }
 
@@ -211,29 +212,66 @@ main{
   max-width: 1600px;
   height: 1106px;
   @include flex(flex,column,flex-start,center);
-  background-color: green;
 }
 
 .pets-container{
   width: calc(1322 / 1600 *100%);
+  height: calc(872 / 1106 * 100%);
+  position: relative;
   max-width: 1322px;
-  @include flex(flex,row,space-between,center);
-  margin-bottom: 70px;
-  background-color: rgb(41, 232, 41);
+  margin-bottom: 5.2%;
+  @include flex(flex,row,center,flex-start);
+  /* margin-bottom: 70px; */
 }
 
 .pets-card-elements{
   width: calc(1160 /1322 *100%);
-  height: 872px;
+  height: calc(872 / 872 * 100%);
+  max-height: 872px;
   @include flex(flex,row,space-between,start);
   flex-wrap: wrap;
   margin: 0 20px;
 }
 
+.card-container{
+  width: calc(366 / 1160 * 100%);
+  height: calc(426 / 872 * 100%);
+  border-radius: 5px;
+  border: 1px solid var(--2, #FA6F32);
+  position: relative;
+  &:nth-child(-n + 3){
+    margin-bottom: 20px;
+  }
+  &:hover{
+    overflow: hidden;
+    .image-pets{
+      cursor: pointer;
+      filter: brightness(0.4);
+      transition: all 0.9s ease-out;
+      transform: scale(1.1);
+    }
+
+    .kind-animal{
+      transition: all 0.7s ease-out;
+      position: absolute;
+      top: 20px;
+      color: #fff;
+    }
+
+    .geographical-place{
+      transition: all 0.7s ease-out;
+      position: absolute;
+      top: 40px;
+      color: $default-state-color;
+    }
+  }
+}
+
 .choose-button{
   @extend %tpl-button;
   border-radius: 25px;
-  margin-top: 10px;
+/*   margin-top: 10px;
+ */ 
   &:hover{
     transition: 0.5s;
     background-color: $hover-color;
@@ -243,12 +281,21 @@ main{
 .slide-button{
   width: 62px;
   height: 62px;
+  position: absolute;
+  top: 46%;
+  left: 0;
   background-color: $default-state-color;
   border-radius: 100%;
   &:hover{
     transition: 0.5s;
     background-color: $hover-color;
   }
+}
+
+.right-slide-button{
+  position: absolute;
+  top: 46%;
+  left: 95.3%;
 }
 
 .about-image-container{
@@ -260,19 +307,11 @@ main{
   transform: rotate(180deg);
 }
 
-.card-container{
-  width: calc(366 / 1322 *100%);
-  height: 426px;
-  border-radius: 5px;
-  border: 1px solid var(--2, #FA6F32);
-  &:nth-child(-n + 3){
-    margin-bottom: 20px;
-  }
-}
-
 .image-pets{
-  width: 100%;
-  max-width: 366px
+  width: calc(366 / 366 *100%);
+  height: calc(366 / 426 *100%);
+  max-width: 366px;
+  transition: filter 0.3s;
 }
 
 .kind-animal{
@@ -392,7 +431,6 @@ main{
   @include flex(flex,column,center,left);
   height: 919px;
   padding-bottom: 50px;
-  background-color: yellow;
 }
 
 .container-testimonials{
@@ -400,7 +438,6 @@ main{
   width: 100%;
   max-width: 1160px;
   margin-bottom: 18px;
-  background-color: green;
 }
 
 .testimonials-images{
@@ -425,10 +462,15 @@ main{
   }
 }
 
+.custom-range{
+  width: 100%;
+  @include flex(flex,row,center,center);
+}
+
 .progress-bar{
-  width:calc(600 / 1160 *100%);
+  width: calc(600 / 1160 *100%);
   height: 8px;
-  margin-left: calc(280 /1160 * 100%);
+  margin-left: 0;
   background: #F5F7F6;
   -webkit-appearance: none;
   appearance: none;
@@ -455,14 +497,13 @@ footer{
 .footer-container{
   width: calc(1160 / 1600 *100%);
   height: 360px;
-  @include flex(flex,column,flex-end,left);
+  @include flex(flex,column,flex-start,left);
   flex-wrap: wrap;
-  background-color: #000;
 }
 
 .footer-logo{
   @include flex(flex,column,center,center);
-  max-width: 82px;
+  width: 82px;
   height: 52px;
   text-align: center;
   position: relative;
@@ -498,6 +539,11 @@ footer{
   @include flex(flex,column,center,center);
   background-color: #c4c4c480;
   border-radius: 100%;
+  transition: all 0.7s;
+  &:hover{
+    cursor: pointer;
+    background-color: $active-state-color;
+  }
 }
 
 .social-media-tittle-container{
@@ -517,6 +563,7 @@ footer{
   width: calc(362 / 1160 *100%);
   height: 360px;
   margin-left: 85px;
+  padding-bottom: 10px;
 }
 
 .footer-navigation-bar{ 
@@ -529,6 +576,7 @@ footer{
     cursor: pointer;
     transition: 0.7s;
     text-decoration: underline;
+    color: $hover-color;
   }
 }
 
@@ -542,7 +590,7 @@ footer{
   @include font("Roboto",400,24px);
   line-height: 120%;
   color: $white-color;
-  margin: 10px 0;
+  margin: 0 0 15px;
 }
 
 .button-subscribe{
@@ -556,6 +604,10 @@ footer{
   line-height: 140%;
   cursor: pointer;
   margin-left: 5px;
+  &:hover{
+    color: $black-blue-color;
+    border: 1px solid var(--Green, $black-blue-color);
+  }
 }
 
 .input-email{
@@ -576,7 +628,7 @@ footer{
   color: rgba(255, 255, 255, 1);
   p {
     &:nth-child(2) {
-      margin-top: 10px;
+      margin-top: 20px;
     }
   }
 }

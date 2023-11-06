@@ -26,7 +26,7 @@
           </ul>
         </nav>
         <div class="designed">
-          <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">
+          <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank">
             <span>Designed by ©</span>
           </a>
         </div>
@@ -78,7 +78,7 @@
                 <img src="../../assets/images/eagle-desktop.png" alt="animal" class="image-pets">
               </div>
               <div class="about-image-container">
-                <div>
+                <div class="about-image-text">
                   <h4 class="kind-animal">Eagles</h4>
                   <p class="geographical-place">Native to South America</p>              
                 </div>
@@ -144,7 +144,7 @@
               </div>
             </div>
           </div>
-          <button class="slide-button right-slide-button">
+          <button class="right-slide-button slide-button">
             <img src="../../assets/icons/Vector.svg" alt="arrow-right" class="arrow-right">
           </button>
         </div>
@@ -196,7 +196,10 @@
           <img src="../../assets/images/testimonials3-desktop.png" alt="testimonials-img" class="testimonials-images">
           <img src="../../assets/images/testimonials4-desktop.png" alt="testimonials-img" class="testimonials-images">
         </div>
-        <input type="range" class="progress-bar">
+        <div class="custom-range">
+          <input type="range" class="progress-bar" id="points" name="points" min="0" max="10" value="0">
+          <output id="rangeValue"></output>
+        </div>
         <button class="feedback-button">leave feedback</button>
       </section>
     </main>
@@ -205,7 +208,7 @@
         <div class="footer-logo">
           <a href="./index.html">
             <img src="../../assets/icons/bambook.svg" alt="logo-icon" class="logo-bambook">
-            <h1>PetStory online</h1>
+            <h2 class="footer-logo-tittle">PetStory online</h2>
           </a>
         </div>
         <button class="button-footer">
@@ -214,16 +217,24 @@
         <div class="social-media-container">
           <div class="social-media-icons">
             <div class="social-circle">
-              <img src="../../assets/icons/facebook.svg" alt="facebook-icon">
+              <a href="http://facebook.com" target="_blank">
+                <img src="../../assets/icons/facebook.svg" alt="facebook-icon">
+              </a>
             </div>
             <div class="social-circle">
-              <img src="../../assets/icons/twiter.svg" alt="facebook-icon">
+              <a href="http://twitter.com" target="_blank">
+                <img src="../../assets/icons/twiter.svg" alt="twitter-icon">
+              </a>
             </div> 
             <div class="social-circle">
-              <img src="../../assets/icons/instagram.svg" alt="facebook-icon">
+              <a href="http://instagram.com" target="_blank">
+                <img src="../../assets/icons/instagram.svg" alt="instagram-icon">
+              </a>
             </div> 
             <div class="social-circle">
-              <img src="../../assets/icons/youtube.svg" alt="facebook-icon">
+              <a href="http://youtube.com" target="_blank">
+                <img src="../../assets/icons/youtube.svg" alt="youtube-icon">
+              </a>
             </div>    
           </div>
           <div class="social-media-tittle-container">
@@ -244,7 +255,7 @@
         <div class="subscribe-container">
           <form class="subscribe-form">
             <h3 class="tittle-form">Subscribe to our news</h3>
-            <input type="email" name="" id="" class="input-email" value="Enter your email">
+            <input type="email" name="" id="" class="input-email" placeholder="Enter your email">
             <input type="button" value="Submit" class="button-subscribe">
           </form>
           <div class="footer-sign">
